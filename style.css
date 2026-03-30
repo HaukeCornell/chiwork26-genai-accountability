@@ -181,6 +181,23 @@ a:hover { color: var(--burgundy-mid); }
   font-size: 0.45rem;
   color: var(--burgundy);
 }
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-text { min-width: 0; }
+.hero-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-icon-img {
+  width: clamp(180px, 20vw, 300px);
+  height: auto;
+  opacity: 0.13;
+}
 .hero-abstract {
   font-size: var(--size-md);
   font-weight: 300;
@@ -686,6 +703,8 @@ pre code {
     grid-template-columns: 64px 1fr;
     gap: 0 1rem;
   }
+  .hero-split { grid-template-columns: 1fr; }
+  .hero-illustration { display: none; }
   .proposal-layout { grid-template-columns: 1fr; }
   .proposal-toc { display: none; }
   .nav-links { gap: 0; }
