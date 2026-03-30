@@ -744,19 +744,27 @@ pre code {
     z-index: 101;
   }
   .nav-links.open { display: flex; }
-  .nav-links li { list-style: none; }
+  .nav-links li { list-style: none; width: 100%; }
   .nav-links a {
     display: block;
-    padding: 0.55rem 0;
+    width: 100%;
+    padding: 0.7rem 0;
     font-size: var(--size-base);
     text-align: left;
     border-bottom: 1px solid var(--rule);
+    border-radius: 0;
+    background: none;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    background: none;
+    color: var(--burgundy);
   }
   .nav-links li:last-child a { border-bottom: none; }
   .nav-links a.nav-cta {
     margin-top: 0.75rem;
     text-align: center;
     border-bottom: none;
+    width: 100%;
   }
 }
 
