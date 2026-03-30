@@ -267,7 +267,7 @@ a:hover { color: var(--burgundy-mid); }
 /* ── Themes grid ── */
 .themes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 0;
 }
 .theme-item {
@@ -391,20 +391,50 @@ pre code {
 /* ── Organizer grid ── */
 .organizers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 0;
 }
 .organizer {
-  padding: 2rem 2rem 2rem 0;
+  padding: 2rem 2.5rem 2rem 0;
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 1.25rem;
+  align-items: start;
 }
-.organizer:nth-child(even) { padding-right: 0; padding-left: 2rem; border-right: none; }
+.organizer:nth-child(even) {
+  padding-right: 0;
+  padding-left: 2.5rem;
+  border-right: none;
+}
+.organizer-photo {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--cream-dark);
+  flex-shrink: 0;
+}
+.organizer-photo-placeholder {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--cream-dark);
+  border: 1px solid var(--rule);
+  flex-shrink: 0;
+}
 .organizer-name {
   font-family: var(--font-display);
   font-size: var(--size-lg);
   font-weight: 600;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
+  grid-column: 2;
 }
 .organizer-role {
   font-size: var(--size-xs);
@@ -412,17 +442,20 @@ pre code {
   text-transform: uppercase;
   color: var(--burgundy);
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  grid-column: 2;
 }
 .organizer-affil {
   font-size: var(--size-sm);
   color: var(--ink-mid);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
+  grid-column: 2;
 }
 .organizer-bio {
   font-size: var(--size-sm);
   color: var(--ink-mid);
   line-height: 1.6;
+  grid-column: 2;
 }
 
 /* ── Track cards ── */
@@ -639,7 +672,12 @@ pre code {
   .themes-grid { grid-template-columns: 1fr; }
   .theme-item, .theme-item:nth-child(2n) { padding: 1.5rem 0; border-right: none; }
   .organizers-grid { grid-template-columns: 1fr; }
-  .organizer, .organizer:nth-child(even) { padding: 1.5rem 0; border-right: none; }
+  .organizer, .organizer:nth-child(even) {
+    padding: 1.5rem 0;
+    border-right: none;
+    grid-template-columns: 64px 1fr;
+    gap: 0 1rem;
+  }
   .proposal-layout { grid-template-columns: 1fr; }
   .proposal-toc { display: none; }
   .nav-links { gap: 0; }
