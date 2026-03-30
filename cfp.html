@@ -79,7 +79,7 @@
         </tr>
         <tr>
           <td>April 9, 2026</td>
-          <td>Organizer publication-ready deadline (CHIWork requirement)</td>
+          <td>Camera-ready deadline</td>
         </tr>
         <tr class="date-highlight">
           <td>June 22, 2026 (Monday)</td>
@@ -138,17 +138,15 @@
     </div>
 
     <div class="template-box">
-      <div class="template-box-label">Track 1 &mdash; LaTeX Template</div>
-      <h4>CHIWork ACM Manuscript Template</h4>
+      <div class="template-box-label">Templates</div>
+      <h4>Submission Templates</h4>
       <p>
-        Use the <strong>ACM Manuscript Template</strong> configured for CHIWork. The Overleaf template is available below. The template uses the <code>manuscript,review</code> class option.
+        We provide pre-configured templates for both tracks. Use the Overleaf template to get started immediately, or download the GitHub repo if you prefer to work locally.
       </p>
       <ul>
-        <li><a href="https://www.overleaf.com/read/hynbqncqcysr#918a80" target="_blank" rel="noopener"><strong>Workshop template on Overleaf</strong> (pre-configured, both tracks) &rarr;</a></li>
-        <li>Or use the <a href="https://github.com/HaukeCornell/chiwork-interrogating-aiwork-workshop-template" target="_blank" rel="noopener">GitHub template repo</a> with the following document class:</li>
+        <li><a href="https://www.overleaf.com/read/hynbqncqcysr#918a80" target="_blank" rel="noopener"><strong>Open on Overleaf</strong> (both tracks, ready to use) &rarr;</a></li>
+        <li><a href="https://github.com/HaukeCornell/chiwork-interrogating-aiwork-workshop-template" target="_blank" rel="noopener">GitHub template repo &rarr;</a></li>
       </ul>
-      <pre><code>\documentclass[manuscript,review]{acmart}
-\acmConference[CHIWork '26]{CHIWork '26 Workshop}{June 2026}{Linz, Austria}</code></pre>
     </div>
   </div>
 </section>
@@ -158,45 +156,12 @@
   <div class="section-inner">
     <div class="section-header">
       <span class="section-label">arXiv</span>
-      <h2 class="section-title">arXiv submission instructions</h2>
+      <h2 class="section-title">arXiv submission</h2>
     </div>
     <div class="prose">
       <p>
-        All accepted Track 1 position papers will be published on <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a>&mdash;this is our open-access proceedings. There is no separate workshop proceedings server. To link your arXiv submission to this workshop, include the following header in your LaTeX source.
+        All accepted Track 1 position papers will be published on <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a>&mdash;this is our open-access proceedings. The <a href="https://www.overleaf.com/read/hynbqncqcysr#918a80" target="_blank" rel="noopener">Overleaf template</a> already includes a workshop identification header that will appear in your compiled PDF.
       </p>
-    </div>
-
-    <div class="template-box" style="margin-top: 1.5rem;">
-      <div class="template-box-label">arXiv LaTeX Header &mdash; Copy into your .tex file</div>
-      <h4>Workshop identification header</h4>
-      <p>Add the following to your preamble (after <code>\documentclass</code>), and call <code>\workshopHeader</code> near the top of your document body:</p>
-      <pre><code>%% ---- CHIWork 2026 Workshop Header ----
-%% Add this to your arXiv submission to link it to our workshop.
-%% Replace YYYY.XXXXX with your workshop proposal arXiv ID once published.
-
-\newcommand{\workshopName}{%
-  Interrogating GenAI Augmentation for CHIworkers:
-  Strategies for Professional Autonomy and Accountability%
-}
-\newcommand{\workshopVenue}{CHIWork 2026, Linz, Austria, June 2026}
-
-%% Use \workshopHeader in your document to display the note:
-\newcommand{\workshopHeader}{%
-  \begin{quote}
-    \small\itshape
-    This position paper was submitted to the CHIWork 2026 Workshop:
-    \emph{\workshopName{}} (\workshopVenue{}).
-    Workshop proposal: Sandhaus et al., 2026 [cite once DOI available].
-  \end{quote}%
-}</code></pre>
-      <p style="margin-top: 0.75rem;">Then in your document body, add:</p>
-      <pre><code>\workshopHeader</code></pre>
-      <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--ink-light);">
-        Once the workshop proposal DOI is available (after camera-ready, April 2026), we will share the exact citation to include.
-      </p>
-    </div>
-
-    <div style="margin-top: 1.5rem;" class="prose">
       <p>
         After uploading to arXiv, please <a href="mailto:hgs52@cornell.edu">email the lead facilitator</a> with your arXiv link so we can list it on the <a href="papers.html">Accepted Papers</a> page.
       </p>
@@ -258,28 +223,11 @@
     </div>
 
     <div class="template-box" style="margin-top: 1.5rem;">
-      <div class="template-box-label">Download</div>
-      <h4>AI Disclosure Statement — LaTeX Template</h4>
+      <div class="template-box-label">Track 2 Template</div>
+      <h4>AI Disclosure Statement Template</h4>
       <p>
-        We also provide a minimal LaTeX template for Track 2 disclosures if you prefer a formatted document. Use the same ACM Manuscript Template with the following preamble note. No specific ACM fields are required.
+        A structured template for Track 2 is included in the <a href="https://www.overleaf.com/read/hynbqncqcysr#918a80" target="_blank" rel="noopener">Overleaf project</a>. You may also submit in any readable format (PDF, Word, plain text).
       </p>
-      <pre><code>\documentclass[manuscript,review]{acmart}
-\settopmatter{printacmref=false}
-\renewcommand\footnotetextcopyrightpermission[1]{}
-%% No conference info required for Track 2.
-
-\title{AI Use Disclosure: [Your Name / Role / Context]}
-\author{Your Name}
-\affiliation{\institution{Your Institution or Company}}
-\email{your@email.com}
-
-\begin{document}
-\maketitle
-
-%% Your 1-2 page reflexive AI disclosure statement here.
-%% Use the Part A + Part B framework above as a guide.
-
-\end{document}</code></pre>
     </div>
   </div>
 </section>
@@ -293,7 +241,7 @@
     </div>
     <div class="prose">
       <p>
-        We use a <strong>light review process</strong> via Google Forms. The committee will evaluate submissions for thematic fit, reflexivity, and contribution to workshop discussion&mdash;not for technical rigor as in full conference papers.
+        The organizing committee will review submissions for thematic fit, reflexivity, and contribution to workshop discussion.
       </p>
       <ol>
         <li>Prepare your submission using the appropriate template above.</li>
@@ -322,7 +270,7 @@
     </div>
     <div class="prose" style="max-width: 70ch;">
       <p>
-        <strong>CHIWork registration is required to attend the workshop.</strong> All participants (including organizers) must register for CHIWork 2026 via the official conference registration system. You may choose full-conference or one-day registration.
+        <strong>CHIWork registration is required to attend the workshop.</strong> All participants must register for CHIWork 2026 via the official conference registration system. You may choose full-conference or one-day registration.
       </p>
       <p>
         <strong>In-person capacity is capped at 25 participants</strong> (venue constraint). Remote/hybrid participation is supported: we will provide Zoom access and ensure remote attendees can fully engage via shared notes and moderated discussion. Mohammed Almutairi coordinates our remote track.
