@@ -707,14 +707,78 @@ pre code {
   .hero-illustration { display: none; }
   .proposal-layout { grid-template-columns: 1fr; }
   .proposal-toc { display: none; }
-  .nav-links { gap: 0; }
-  .nav-links a { padding: 0.35rem 0.5rem; }
+  .framework-grid { grid-template-columns: 1fr; }
+
+  /* Homepage two-column prose → single column */
+  .prose[style*="grid-template-columns: 1fr 1fr"] {
+    display: block !important;
+  }
+
+  /* Nav: hamburger toggle */
+  .nav-toggle { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    right: 0;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rule);
+    flex-direction: column;
+    padding: 0.5rem var(--gap) 1rem;
+    gap: 0;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    padding: 0.6rem 0;
+    font-size: var(--size-base);
+  }
+  .nav-links a.nav-cta {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; }
   .btn { justify-content: center; }
 }
+
+/* ── Framework grid (CFP disclosure) ── */
+.framework-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.framework-panel {
+  background: var(--cream);
+  padding: 1.75rem;
+}
+.framework-item {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.framework-icon {
+  flex-shrink: 0;
+  width: 1.4em;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+/* ── Hamburger menu ── */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--ink);
+}
+.nav-toggle svg { display: block; }
 
 /* ── Utilities ── */
 .text-burgundy { color: var(--burgundy); }
