@@ -141,19 +141,79 @@
   </div>
 </section>
 
-<!-- arXiv instructions -->
+<!-- Camera-ready / arXiv instructions -->
 <section class="section" id="arxiv">
   <div class="section-inner">
     <div class="section-header">
-      <span class="section-label">arXiv</span>
-      <h2 class="section-title">arXiv submission</h2>
+      <span class="section-label">Camera-ready</span>
+      <h2 class="section-title">Camera-ready &amp; arXiv submission</h2>
     </div>
-    <div class="prose">
+    <div class="prose" style="max-width: 70ch;">
       <p>
-        All accepted Track 1 position papers will be published on <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a>&mdash;this is our open-access proceedings. The <a href="https://www.overleaf.com/read/hynbqncqcysr#918a80" target="_blank" rel="noopener">Overleaf template</a> already includes a workshop identification header that will appear in your compiled PDF.
+        All accepted <strong>Track 1</strong> position papers will be published on <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a>&mdash;this is our open-access proceedings. The <a href="https://www.overleaf.com/read/hynbqncqcysr#918a80" target="_blank" rel="noopener">Overleaf template</a> and the <a href="https://github.com/HaukeCornell/chiwork-interrogating-aiwork-workshop-template" target="_blank" rel="noopener">GitHub template repo</a> already wire in the workshop venue and citation, so the camera-ready PDF identifies as a workshop paper.
       </p>
+      <ol>
+        <li>Finalize your <code>.tex</code> source and compile the camera-ready PDF.</li>
+        <li>Upload the PDF to <a href="https://arxiv.org" target="_blank" rel="noopener">arXiv</a>.</li>
+        <li>(Optional) Paste your arXiv ID into <code>\newcommand{\workshopArxiv}{...}</code> in the preamble and recompile, then replace the arXiv version &mdash; this prints the arXiv link in the workshop note on the first page.</li>
+        <li><strong>Email <a href="mailto:hgs52@cornell.edu">hgs52@cornell.edu</a></strong> with your arXiv link so we list it on the <a href="papers.html">Papers page</a>.</li>
+      </ol>
+
+      <h3>Workshop citation (must appear in every Track 1 paper)</h3>
+      <p>The Overleaf/GitHub templates already include this in <code>references.bib</code> as <code>\cite{sandhaus2026interrogating}</code>. If you start from your own template, copy the BibTeX entry below.</p>
+    </div>
+
+    <div class="template-box" style="margin-top: 1.5rem;">
+      <div class="template-box-label">BibTeX</div>
+      <h4>Workshop proposal entry</h4>
+<pre><code>@inproceedings{sandhaus2026interrogating,
+  author    = {Sandhaus, Hauke and Imteyaz, Kashif and Almutairi, Mohammed
+               and Prajod, Pooja and Ramesh, Divya and Savage, Saiph
+               and Yang, Qian and Muller, Michael},
+  title     = {Interrogating {GenAI} Augmentation for {CHIworkers}:
+               Strategies for Professional Autonomy and Accountability},
+  year      = {2026},
+  isbn      = {979-8-4007-2598-2/2026/06},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3805029.3818271},
+  doi       = {10.1145/3805029.3818271},
+  booktitle = {Adjunct Proceedings of the 5th Annual Symposium on
+               Human-Computer Interaction for Work},
+  series    = {CHIWORK '26},
+  location  = {Linz, Austria},
+  month     = jun,
+}</code></pre>
+    </div>
+
+    <div class="template-box" style="margin-top: 1.5rem;">
+      <div class="template-box-label">Plain-text citation</div>
+      <p style="font-family: var(--font-display); font-style: italic; color: var(--ink); line-height: 1.6;">
+        Hauke Sandhaus, Kashif Imteyaz, Mohammed Almutairi, Pooja Prajod, Divya Ramesh, Saiph Savage, Qian Yang, and Michael Muller. 2026. Interrogating GenAI Augmentation for CHIworkers: Strategies for Professional Autonomy and Accountability. In <em>Adjunct Proceedings of the 5th Annual Symposium on Human-Computer Interaction for Work (CHIWORK '26), June 22&ndash;25, 2026, Linz, Austria</em>. ACM, New York, NY, USA. <a href="https://doi.org/10.1145/3805029.3818271" target="_blank" rel="noopener">https://doi.org/10.1145/3805029.3818271</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Track 2 public disclosure recommendation -->
+<section class="section" id="public-disclosure">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-label">Track 2 disclosure</span>
+      <h2 class="section-title">Sharing your disclosure publicly</h2>
+    </div>
+    <div class="prose" style="max-width: 70ch;">
       <p>
-        After uploading to arXiv, please <a href="mailto:hgs52@cornell.edu">email the lead facilitator</a> with your arXiv link so we can list it on the <a href="papers.html">Accepted Papers</a> page.
+        For accepted <strong>Track 2</strong> disclosure statements, we encourage authors to upload their final PDF to a public science repository as a supplementary <em>good-practice disclosure notice</em>, situated <strong>next to the work they are disclosing about</strong>. This treats the disclosure as a companion document visible to readers of that work, rather than a one-time submission.
+      </p>
+      <p>Recommended hosts:</p>
+      <ul>
+        <li><a href="https://osf.io" target="_blank" rel="noopener">OSF</a> &mdash; if your underlying work is registered there or has associated materials</li>
+        <li><a href="https://figshare.com" target="_blank" rel="noopener">figshare</a> &mdash; for standalone disclosures linked to a published paper</li>
+        <li><strong>GitHub</strong> &mdash; if your work is a tool, dataset, or codebase, attach the disclosure to its repo</li>
+      </ul>
+      <p>
+        After uploading, email <a href="mailto:hgs52@cornell.edu">hgs52@cornell.edu</a> with the link. We will list it on the <a href="papers.html">Papers page</a>. <strong>Anonymous and keep-private options remain available</strong> if you'd prefer not to publish.
       </p>
     </div>
   </div>
