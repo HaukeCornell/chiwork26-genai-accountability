@@ -778,3 +778,25 @@ pre code {
 .text-muted { color: var(--ink-mid); }
 .divider { height: 1px; background: var(--rule); margin: 2rem 0; }
 .mt-0 { margin-top: 0; }
+
+/* ── Workshop photo + citation ── */
+.hero-cite {
+  margin-top: 1rem;
+  font-size: var(--size-xs);
+  color: var(--ink-light);
+  letter-spacing: 0.02em;
+}
+.workshop-photo { margin: 0; }
+.workshop-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  border: 1px solid var(--rule);
+}
+.workshop-photo figcaption {
+  margin-top: 0.75rem;
+  font-size: var(--size-sm);
+  color: var(--ink-mid);
+  line-height: 1.6;
+  max-width: 70ch;
+}
